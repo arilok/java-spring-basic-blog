@@ -9,13 +9,13 @@ import org.springframework.stereotype.Controller;
 public class BlogController {
     private PostRepository postRepository;
 
-//    public void postRepository(PostRepository) {
-//        return;
-//    }
+    public BlogController(PostRepository postRepository){
+
+    }
 
     @RequestMapping("/")
     public String listPosts(ModelMap modelMap) {
-      //  getAllPosts();
+        getAllPosts();
         modelMap.put("title", "Blog Post 1");
         return "home";
     }
